@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+  <head>
+  <!-- extentions app -->
+    <meta charset="utf-8">
+    <script src="./ext.js"></script>
+    <script src="./lib/CSInterface.js"></script>
+    <script src="./lib/jquery-1.9.1.js"></script>
+
+	<link id="ppstyle" rel="stylesheet" type="text/css" href="css/style.css">
+   
+	<title>Tape Layoff</title>
+
+  </head>
+
+  <body onLoad="onLoaded()">
+	<div class="wrapper">
+        <section class="containers" id="presets">
+            <select class="selectMenu" id="presetList">
+            	<option value="selectionTitle">Select Preset</option>
+			</select>
+        </section><!-- end container: presets -->
+        
+        <section class="containers" id="clips">
+            <div id="clipSelection">
+                <button class="btnGroup1" id="btn_selectClipFolder" onClick="folderSelect()">Select Clip Folder</button>
+            </div>
+        </section><!-- end container: data -->
+                
+        <section class="containers" id="sequenceSettings">
+            <div id="sequenceOptions">
+				<span class="input_span" id="AE_spacing"><input class="radio_checkbox" name="dropNonDrop" id="drop" type="radio" value="drop">Drop</span>
+				<span class="input_span" id="AE_spacing"><input class="radio_checkbox" name="dropNonDrop" id="nonDrop" type="radio" value="nonDrop">Non-Drop</span>
+                <hr class="divLine" id="divLine_renderManager">
+                <span class="input_span"><input class="radio_checkbox" id="hasXFrame" type="checkbox" value="hasXFrame">Has X Frame</span>
+            </div>
+        </section><!-- end container: sequenceSettings -->
+        
+        <section class="containers" id="submit">
+            <button class="btnGroup2" id="btn_reset">Reset</button>
+            <button class="btnGroup2" id="btn_batch" onClick="stageProject()">Batch</button>
+		</section><!-- end container: submit -->
+        
+        
+    </div><!-- end wrapper -->
+
+  </body>
+
+</html>
